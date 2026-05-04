@@ -79,16 +79,37 @@ int main (int argc, char *argv[]) {
         }
     }
 }
-
-// FASE 3: percorre a fila por ordem (FIFO) e lança pendentes até ao limite N
+        int execucoes_por_user[1024]={0};
+        for (int i = 0; i < query_size; i++){
+            if (req_arr[i].status == 1 ) // em exec
+                execucoes_por_user[req_arr[i].user_id]++;
+        }
+        int lancados = 0; 
+        // alterna entre users
         for (int i = 0; i < query_size; i++) {
-            if (running >= parallel_commands) break; // Para quando atingir o limite de paralelismo
-            if (req_arr[i].status == 0) { // Comando pendente
-                running++; // Incrementa o contador de processos ativos
-                gettimeofday(&start_times[i], NULL); // Marca o tempo de início da execução do comando
-                controller_envia_Ok_para_runner(req_arr[i]); // Envia Ok para o runner para indicar que o comando pode ser executado
-    }
-}
+            if (running >= parallel_commands) break; // respeita limite total
+            if (req_arr[i].status == 0) { // comando pendente
+                // Verifica se existe outro user pendente com menos slots em execução
+                int justo = 1; // assume que é justo lançar este
+                for (int j = 0; j < query_size; j++) {
+                    if (req_arr[j].status == 0 && req_arr[j].user_id != req_arr[i].user_id) 
+                    {
+                        if (execucoes_por_user[req_arr[j].user_id] < execucoes_por_user[req_arr[i].user_id])
+                        {
+                            justo = 0;
+                            break;
+                        }
+                    }
+                }
+                if(justo){
+                    running++;
+                    lancados++;
+                    execucoes_por_user[req_arr[i].user_id]++;
+                    gettimeofday(&start_times[i],NULL); // marca o tempo de inicio da exec do comando 
+                    controller_envia_Ok_para_runner(req_arr[i]);
+                }
+            }
+        }
 
   
         if (req.status == 3 && !shutdown_pedido) { // Dizer que foi pedido a terminação do controller (status 3)
