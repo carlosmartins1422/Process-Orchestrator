@@ -102,6 +102,7 @@ int main (int argc, char *argv[]) {
                     }
                 }
                 if(justo){
+                    req_arr[i].status = 1;
                     running++;
                     lancados++;
                     execucoes_por_user[req_arr[i].user_id]++;

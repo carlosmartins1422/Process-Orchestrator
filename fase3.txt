@@ -26,8 +26,8 @@ Checklist:
     - Round Robin
     - Prioridades
 
-[ ] Garantir justiça entre utilizadores
+[X] Garantir justiça entre utilizadores
 
-[ ] Testar múltiplos runners simultâneos
+[X] Testar múltiplos runners simultâneos
 
-[ ] Verificar que limite de paralelismo é respeitado
+[X] Verificar que limite de paralelismo é respeitado
