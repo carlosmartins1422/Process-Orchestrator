@@ -1,28 +1,28 @@
 Utilizador: 1
-Comando executado: ls
-Tempo gasto: 0.006014 segundos
-
-Utilizador: 2
-Comando executado: sleep 2
-Tempo gasto: 2.004320 segundos
-
-Utilizador: 3
-Comando executado: date
-Tempo gasto: 0.003855 segundos
+Comando executado: sleep 15
+Tempo gasto: 15.004082 segundos
 
 Utilizador: 1
-Comando executado: sleep 5
-Tempo gasto: 5.013532 segundos
-
-Utilizador: 2
-Comando executado: sleep 5
-Tempo gasto: 5.013498 segundos
+Comando executado: sleep 15
+Tempo gasto: 15.003485 segundos
 
 Utilizador: 3
-Comando executado: sleep 5
-Tempo gasto: 5.015260 segundos
+Comando executado: sleep 10
+Tempo gasto: 10.003896 segundos
+
+Utilizador: 2
+Comando executado: sleep 15
+Tempo gasto: 15.004498 segundos
+
+Utilizador: 2
+Comando executado: sleep 10
+Tempo gasto: 10.003835 segundos
 
 Utilizador: 1
 Comando executado: sleep 10
-Tempo gasto: 10.012854 segundos
+Tempo gasto: 10.004517 segundos
+
+Utilizador: 1
+Comando executado: sleep 10
+Tempo gasto: 10.004347 segundos
 

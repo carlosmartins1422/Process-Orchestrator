@@ -6,7 +6,7 @@ typedef struct {
     int command_id;
     char command[256];
     char reply_pipe[64];
-    int status; // 0 = pendente, 1 = em execução, 2 = concluída, 3 = (-s) pedido de terminação do controller
+    int status; // 0 = pendente, 1 = em execução, 2 = concluída, 3 = (-s) pedido de terminação do controller, 4 = (-c) pedido de consulta dos comandos em execução e em espera
 } Request;
 
 void runner_pede_terminacao_controller();
