@@ -1,0 +1,174 @@
+AVALIACAO DE POLITICAS DE ESCALONAMENTO
+
+Relatório resumido: política, paralelismo, tempo total e tempo de cada comando.
+==================================================
+POLITICA: FIFO | PARALELISMO: 2
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 21.06 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004613 s
+User 1 | sleep 3 | 3.004234 s
+User 2 | sleep 1 | 1.004335 s
+User 2 | sleep 1 | 1.002144 s
+User 1 | sleep 3 | 3.006008 s
+User 2 | sleep 1 | 1.004670 s
+User 2 | sleep 1 | 1.003770 s
+User 2 | sleep 1 | 1.003947 s
+User 1 | sleep 3 | 3.004096 s
+User 3 | sleep 2 | 2.003986 s
+User 1 | sleep 3 | 3.004524 s
+User 3 | sleep 2 | 2.003882 s
+User 4 | sleep 1 | 1.004669 s
+User 3 | sleep 2 | 2.005043 s
+User 4 | sleep 3 | 3.004358 s
+User 3 | sleep 2 | 2.004770 s
+User 4 | sleep 1 | 1.003950 s
+User 3 | sleep 2 | 2.003505 s
+User 4 | sleep 1 | 1.004843 s
+User 4 | sleep 3 | 3.003875 s
+==================================================
+POLITICA: RANDOM | PARALELISMO: 2
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 21.04 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.005054 s
+User 1 | sleep 3 | 3.004888 s
+User 2 | sleep 1 | 1.004077 s
+User 3 | sleep 2 | 2.004399 s
+User 4 | sleep 1 | 1.003763 s
+User 3 | sleep 2 | 2.004409 s
+User 1 | sleep 3 | 3.003609 s
+User 2 | sleep 1 | 1.003355 s
+User 2 | sleep 1 | 1.001088 s
+User 2 | sleep 1 | 1.001609 s
+User 1 | sleep 3 | 3.001271 s
+User 4 | sleep 1 | 1.004370 s
+User 4 | sleep 1 | 1.001784 s
+User 4 | sleep 3 | 3.002095 s
+User 3 | sleep 2 | 2.002844 s
+User 2 | sleep 1 | 1.003821 s
+User 3 | sleep 2 | 2.004614 s
+User 4 | sleep 3 | 3.004294 s
+User 1 | sleep 3 | 3.005603 s
+User 3 | sleep 2 | 2.001792 s
+==================================================
+POLITICA: FAIR | PARALELISMO: 2
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 21.06 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004636 s
+User 1 | sleep 3 | 3.004406 s
+User 2 | sleep 1 | 1.003912 s
+User 3 | sleep 2 | 2.003615 s
+User 4 | sleep 1 | 1.002021 s
+User 2 | sleep 1 | 1.004069 s
+User 3 | sleep 2 | 2.004234 s
+User 4 | sleep 3 | 3.004330 s
+User 1 | sleep 3 | 3.003988 s
+User 2 | sleep 1 | 1.004068 s
+User 4 | sleep 1 | 1.003672 s
+User 3 | sleep 2 | 2.003931 s
+User 2 | sleep 1 | 1.004395 s
+User 1 | sleep 3 | 3.004133 s
+User 3 | sleep 2 | 2.004172 s
+User 4 | sleep 3 | 3.003987 s
+User 1 | sleep 3 | 3.005514 s
+User 2 | sleep 1 | 1.003598 s
+User 4 | sleep 1 | 1.003703 s
+User 3 | sleep 2 | 2.003840 s
+==================================================
+POLITICA: FIFO | PARALELISMO: 4
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 12.05 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004317 s
+User 1 | sleep 3 | 3.004290 s
+User 1 | sleep 3 | 3.004411 s
+User 1 | sleep 3 | 3.005008 s
+User 2 | sleep 1 | 1.007517 s
+User 2 | sleep 1 | 1.004761 s
+User 3 | sleep 2 | 2.005302 s
+User 4 | sleep 1 | 1.004176 s
+User 2 | sleep 1 | 1.004763 s
+User 1 | sleep 3 | 3.004808 s
+User 2 | sleep 1 | 1.004324 s
+User 3 | sleep 2 | 2.005079 s
+User 2 | sleep 1 | 1.004072 s
+User 4 | sleep 1 | 1.004217 s
+User 4 | sleep 3 | 3.006082 s
+User 3 | sleep 2 | 2.004202 s
+User 3 | sleep 2 | 2.004364 s
+User 4 | sleep 1 | 1.005220 s
+User 3 | sleep 2 | 2.004541 s
+User 4 | sleep 3 | 3.004847 s
+==================================================
+POLITICA: RANDOM | PARALELISMO: 4
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 11.05 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.005399 s
+User 1 | sleep 3 | 3.005071 s
+User 1 | sleep 3 | 3.004167 s
+User 1 | sleep 3 | 3.003859 s
+User 2 | sleep 1 | 1.004509 s
+User 3 | sleep 2 | 2.004550 s
+User 3 | sleep 2 | 2.004214 s
+User 3 | sleep 2 | 2.004100 s
+User 4 | sleep 1 | 1.004302 s
+User 3 | sleep 2 | 2.004500 s
+User 4 | sleep 3 | 3.004149 s
+User 2 | sleep 1 | 1.004037 s
+User 1 | sleep 3 | 3.005016 s
+User 4 | sleep 1 | 1.004076 s
+User 2 | sleep 1 | 1.004215 s
+User 2 | sleep 1 | 1.003765 s
+User 4 | sleep 1 | 1.003663 s
+User 4 | sleep 3 | 3.003877 s
+User 3 | sleep 2 | 2.004032 s
+User 2 | sleep 1 | 1.003925 s
+==================================================
+POLITICA: FAIR | PARALELISMO: 4
+CENARIO: 4 utilizadores, 5 comandos por utilizador
+
+[Resumo do teste]
+Tempo total: 11.06 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004232 s
+User 1 | sleep 3 | 3.005840 s
+User 1 | sleep 3 | 3.004072 s
+User 1 | sleep 3 | 3.004163 s
+User 2 | sleep 1 | 1.005158 s
+User 2 | sleep 1 | 1.005306 s
+User 3 | sleep 2 | 2.006176 s
+User 3 | sleep 2 | 2.005946 s
+User 4 | sleep 1 | 1.004349 s
+User 2 | sleep 1 | 1.005073 s
+User 4 | sleep 1 | 1.005000 s
+User 4 | sleep 3 | 3.003553 s
+User 3 | sleep 2 | 2.004886 s
+User 2 | sleep 1 | 1.004471 s
+User 3 | sleep 2 | 2.010099 s
+User 2 | sleep 1 | 1.012904 s
+User 4 | sleep 1 | 1.011656 s
+User 4 | sleep 3 | 3.003467 s
+User 1 | sleep 3 | 3.003081 s
+User 3 | sleep 2 | 2.016035 s
+
+==================================================
+FIM DOS TESTES

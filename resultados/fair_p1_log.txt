@@ -1,0 +1,16 @@
+Utilizador: 1
+Comando executado: sleep 4
+Tempo gasto: 4.004124 segundos
+
+Utilizador: 2
+Comando executado: sleep 1
+Tempo gasto: 1.004204 segundos
+
+Utilizador: 1
+Comando executado: sleep 4
+Tempo gasto: 4.004039 segundos
+
+Utilizador: 2
+Comando executado: sleep 1
+Tempo gasto: 1.004617 segundos
+

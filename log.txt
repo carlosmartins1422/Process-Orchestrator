@@ -1,28 +1,80 @@
 Utilizador: 1
-Comando executado: sleep 15
-Tempo gasto: 15.004082 segundos
+Comando executado: sleep 3
+Tempo gasto: 3.004232 segundos
 
 Utilizador: 1
-Comando executado: sleep 15
-Tempo gasto: 15.003485 segundos
+Comando executado: sleep 3
+Tempo gasto: 3.005840 segundos
+
+Utilizador: 1
+Comando executado: sleep 3
+Tempo gasto: 3.004072 segundos
+
+Utilizador: 1
+Comando executado: sleep 3
+Tempo gasto: 3.004163 segundos
+
+Utilizador: 2
+Comando executado: sleep 1
+Tempo gasto: 1.005158 segundos
+
+Utilizador: 2
+Comando executado: sleep 1
+Tempo gasto: 1.005306 segundos
 
 Utilizador: 3
-Comando executado: sleep 10
-Tempo gasto: 10.003896 segundos
+Comando executado: sleep 2
+Tempo gasto: 2.006176 segundos
+
+Utilizador: 3
+Comando executado: sleep 2
+Tempo gasto: 2.005946 segundos
+
+Utilizador: 4
+Comando executado: sleep 1
+Tempo gasto: 1.004349 segundos
 
 Utilizador: 2
-Comando executado: sleep 15
-Tempo gasto: 15.004498 segundos
+Comando executado: sleep 1
+Tempo gasto: 1.005073 segundos
+
+Utilizador: 4
+Comando executado: sleep 1
+Tempo gasto: 1.005000 segundos
+
+Utilizador: 4
+Comando executado: sleep 3
+Tempo gasto: 3.003553 segundos
+
+Utilizador: 3
+Comando executado: sleep 2
+Tempo gasto: 2.004886 segundos
 
 Utilizador: 2
-Comando executado: sleep 10
-Tempo gasto: 10.003835 segundos
+Comando executado: sleep 1
+Tempo gasto: 1.004471 segundos
+
+Utilizador: 3
+Comando executado: sleep 2
+Tempo gasto: 2.010099 segundos
+
+Utilizador: 2
+Comando executado: sleep 1
+Tempo gasto: 1.012904 segundos
+
+Utilizador: 4
+Comando executado: sleep 1
+Tempo gasto: 1.011656 segundos
+
+Utilizador: 4
+Comando executado: sleep 3
+Tempo gasto: 3.003467 segundos
 
 Utilizador: 1
-Comando executado: sleep 10
-Tempo gasto: 10.004517 segundos
+Comando executado: sleep 3
+Tempo gasto: 3.003081 segundos
 
-Utilizador: 1
-Comando executado: sleep 10
-Tempo gasto: 10.004347 segundos
+Utilizador: 3
+Comando executado: sleep 2
+Tempo gasto: 2.016035 segundos
 

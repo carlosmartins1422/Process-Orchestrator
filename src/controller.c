@@ -253,7 +253,7 @@ int main (int argc, char *argv[]) {
                 int melhor_indice = -1;
 
                 for (int i = 0; i < query_size; i++) {
-                    if (req_arr[i].status != 0) continue;
+                    if (req_arr[i].status != 0) continue; // ignora comandos que não estão pendentes
 
                     if (melhor_indice == -1 || comandos_por_user[req_arr[i].user_id] < comandos_por_user[req_arr[melhor_indice].user_id]) {
                         melhor_indice = i;

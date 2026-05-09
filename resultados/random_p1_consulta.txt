@@ -1,0 +1,6 @@
+ Comandos em execução 
+  [ID: 20871] [user: 1] sleep 4
+ Comandos em espera 
+  [ID: 20872] [user: 1] sleep 4
+  [ID: 20873] [user: 2] sleep 1
+  [ID: 20874] [user: 2] sleep 1

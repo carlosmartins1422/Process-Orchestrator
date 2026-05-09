@@ -1,0 +1,5 @@
+[controller] parallel-commands: 1
+[controller] scheduling policy: FIFO
+[runner] sent shutdown notification
+[runner] waiting for controller to shutdown...
+[runner] controller exited.
