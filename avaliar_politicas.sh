@@ -1,6 +1,7 @@
 #!/bin/bash
 # antes de correr ./avaliar_politicas.sh
-# tem que se fzer chmod +x avaliar_politicas.sh
+# tem que se fzer chmod +x avaliar_politicas.sh, para dar permissão de execução ao script
+# adicionar tempo por user para ver como as politicas afetam cada user individualmente
 
 REPORT="avaliacao_politicas.txt"
 controller_pid=""

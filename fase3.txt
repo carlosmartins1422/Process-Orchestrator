@@ -22,7 +22,7 @@ Checklist:
 [X] Implementar política de escalonamento:
     - FIFO (mínimo obrigatório)
 
-[ ] (Opcional) Implementar outras políticas:
+[X] (Opcional) Implementar outras políticas:
     - Round Robin
     - Prioridades
 

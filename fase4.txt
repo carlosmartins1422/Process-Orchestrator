@@ -28,11 +28,11 @@ Checklist:
 [ ] Testar redirecionamentos:
     - > ficheiro.txt
 
-[ ] Criar scripts de teste em bash
+[X] Criar scripts de teste em bash
 
-[ ] Executar testes com múltiplos runners
+[X] Executar testes com múltiplos runners
 
-[ ] Comparar diferentes políticas de escalonamento
+[X] Comparar diferentes políticas de escalonamento
 
 [ ] Registar resultados:
     - tabelas
