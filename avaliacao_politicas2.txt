@@ -1,0 +1,217 @@
+AVALIACAO DE POLITICAS DE ESCALONAMENTO - CENARIO 2
+
+Relatório resumido: política, paralelismo, tempo total, tempo de cada comando e tempo total por utilizador.
+Objetivo: mostrar o impacto quando alguns users submetem poucos jobs e outros muitos.
+==================================================
+POLITICA: FIFO | PARALELISMO: 2
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 28.11 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.007181 s
+User 1 | sleep 3 | 3.011171 s
+User 2 | sleep 3 | 3.007373 s
+User 1 | sleep 3 | 3.005749 s
+User 2 | sleep 3 | 3.003484 s
+User 1 | sleep 3 | 3.003799 s
+User 2 | sleep 3 | 3.001657 s
+User 1 | sleep 3 | 3.001741 s
+User 2 | sleep 3 | 3.003663 s
+User 1 | sleep 3 | 3.003597 s
+User 2 | sleep 3 | 3.003872 s
+User 1 | sleep 3 | 3.003877 s
+User 2 | sleep 3 | 3.003796 s
+User 1 | sleep 3 | 3.003715 s
+User 3 | sleep 1 | 1.000964 s
+User 3 | sleep 1 | 1.001522 s
+User 2 | sleep 3 | 3.001467 s
+User 4 | sleep 1 | 1.004452 s
+User 4 | sleep 1 | 1.004348 s
+User 2 | sleep 3 | 3.004356 s
+
+[Tempo total por utilizador]
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 21.05 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 22.03 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 24.07 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 27.07 segundos
+==================================================
+POLITICA: RANDOM | PARALELISMO: 2
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 27.09 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.005585 s
+User 1 | sleep 3 | 3.006776 s
+User 2 | sleep 3 | 3.006282 s
+User 2 | sleep 3 | 3.005656 s
+User 1 | sleep 3 | 3.004501 s
+User 2 | sleep 3 | 3.004376 s
+User 2 | sleep 3 | 3.003948 s
+User 1 | sleep 3 | 3.004267 s
+User 2 | sleep 3 | 3.003852 s
+User 1 | sleep 3 | 3.003464 s
+User 4 | sleep 1 | 1.003992 s
+User 1 | sleep 3 | 3.003817 s
+User 3 | sleep 1 | 1.003905 s
+User 1 | sleep 3 | 3.003806 s
+User 4 | sleep 1 | 1.003739 s
+User 2 | sleep 3 | 3.004432 s
+User 3 | sleep 1 | 1.003620 s
+User 2 | sleep 3 | 3.003940 s
+User 1 | sleep 3 | 3.003634 s
+User 2 | sleep 3 | 3.003403 s
+
+[Tempo total por utilizador]
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 19.03 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 22.06 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 26.05 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 26.07 segundos
+==================================================
+POLITICA: FAIR | PARALELISMO: 2
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 27.10 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004520 s
+User 1 | sleep 3 | 3.005921 s
+User 3 | sleep 1 | 1.004727 s
+User 4 | sleep 1 | 1.004404 s
+User 2 | sleep 3 | 3.004571 s
+User 3 | sleep 1 | 1.003765 s
+User 2 | sleep 3 | 3.001724 s
+User 4 | sleep 1 | 1.004111 s
+User 1 | sleep 3 | 3.004128 s
+User 2 | sleep 3 | 3.004780 s
+User 1 | sleep 3 | 3.004463 s
+User 2 | sleep 3 | 3.003984 s
+User 1 | sleep 3 | 3.004872 s
+User 2 | sleep 3 | 3.005159 s
+User 2 | sleep 3 | 3.004469 s
+User 1 | sleep 3 | 3.004822 s
+User 1 | sleep 3 | 3.004372 s
+User 2 | sleep 3 | 3.004411 s
+User 2 | sleep 3 | 3.004593 s
+User 1 | sleep 3 | 3.004810 s
+
+[Tempo total por utilizador]
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 6.04 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 7.03 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 26.06 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 26.08 segundos
+==================================================
+POLITICA: FIFO | PARALELISMO: 4
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 15.11 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004116 s
+User 1 | sleep 3 | 3.003665 s
+User 1 | sleep 3 | 3.003827 s
+User 1 | sleep 3 | 3.005217 s
+User 3 | sleep 1 | 1.001596 s
+User 4 | sleep 1 | 1.001365 s
+User 3 | sleep 1 | 1.004727 s
+User 4 | sleep 1 | 1.005515 s
+User 2 | sleep 3 | 3.001990 s
+User 1 | sleep 3 | 3.001458 s
+User 1 | sleep 3 | 3.005618 s
+User 2 | sleep 3 | 3.004814 s
+User 2 | sleep 3 | 3.005113 s
+User 1 | sleep 3 | 3.003620 s
+User 1 | sleep 3 | 3.003701 s
+User 2 | sleep 3 | 3.004012 s
+User 2 | sleep 3 | 3.001501 s
+User 2 | sleep 3 | 3.001443 s
+User 2 | sleep 3 | 3.002208 s
+User 2 | sleep 3 | 3.002042 s
+
+[Tempo total por utilizador]
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.01 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.03 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 11.03 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 14.07 segundos
+==================================================
+POLITICA: RANDOM | PARALELISMO: 4
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 16.08 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.001418 s
+User 1 | sleep 3 | 3.001645 s
+User 1 | sleep 3 | 3.002000 s
+User 1 | sleep 3 | 3.002094 s
+User 3 | sleep 1 | 1.004173 s
+User 3 | sleep 1 | 1.005539 s
+User 4 | sleep 1 | 1.003979 s
+User 2 | sleep 3 | 3.004609 s
+User 1 | sleep 3 | 3.004043 s
+User 1 | sleep 3 | 3.004318 s
+User 2 | sleep 3 | 3.004070 s
+User 2 | sleep 3 | 3.005248 s
+User 2 | sleep 3 | 3.005324 s
+User 4 | sleep 1 | 1.003865 s
+User 1 | sleep 3 | 3.003827 s
+User 2 | sleep 3 | 3.004781 s
+User 2 | sleep 3 | 3.005098 s
+User 2 | sleep 3 | 3.003832 s
+User 2 | sleep 3 | 3.003836 s
+User 1 | sleep 3 | 3.004960 s
+
+[Tempo total por utilizador]
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 3.01 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 8.05 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 13.03 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 15.06 segundos
+==================================================
+POLITICA: FAIR | PARALELISMO: 4
+CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos
+Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois
+
+[Resumo do teste]
+Tempo total: 15.08 segundos
+
+[Comandos executados]
+User 1 | sleep 3 | 3.004614 s
+User 1 | sleep 3 | 3.004636 s
+User 1 | sleep 3 | 3.005349 s
+User 1 | sleep 3 | 3.004572 s
+User 3 | sleep 1 | 1.004201 s
+User 4 | sleep 1 | 1.003570 s
+User 3 | sleep 1 | 1.004368 s
+User 4 | sleep 1 | 1.003766 s
+User 2 | sleep 3 | 3.003910 s
+User 2 | sleep 3 | 3.003376 s
+User 2 | sleep 3 | 3.004604 s
+User 2 | sleep 3 | 3.004403 s
+User 1 | sleep 3 | 3.002502 s
+User 2 | sleep 3 | 3.001546 s
+User 1 | sleep 3 | 3.004150 s
+User 2 | sleep 3 | 3.003675 s
+User 1 | sleep 3 | 3.004221 s
+User 2 | sleep 3 | 3.003826 s
+User 1 | sleep 3 | 3.004485 s
+User 2 | sleep 3 | 3.004354 s
+
+[Tempo total por utilizador]
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.03 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.03 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 14.06 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 14.04 segundos
+
+==================================================
+FIM DOS TESTES

@@ -7,6 +7,7 @@
 #include "runner.h"
 #include <string.h>
 #include <sys/wait.h>
+#include <ctype.h>
 #include "controller.h"
 #include "common.h"
 
@@ -157,4 +158,35 @@ int controller_envia_lista_para_runner(Request req, Request req_arr[],
     write(fd_res, buffer, strlen(buffer)); // envia a lista ao runner
     close(fd_res);
     return 0;
+}
+
+char *trim_espacos(char *str) { // elimina espaços
+    while (*str && isspace((unsigned char)*str)) {
+        str++;
+    }
+
+    if (*str == '\0') {
+        return str;
+    }
+
+    char *fim = str + strlen(str) - 1;
+    while (fim > str && isspace((unsigned char)*fim)) {
+        *fim = '\0';
+        fim--;
+    }
+
+    return str;
+}
+
+int prepara_argumentos(char *comando, char *args[], int max_args) { // Função para preparar os argumentos para a execução do comando, dividindo a string do comando em tokens e armazenando os ponteiros para os tokens no array args
+    int i = 0;
+    char *token = strtok(comando, " ");
+
+    while (token != NULL && i < max_args - 1) {
+        args[i++] = token;
+        token = strtok(NULL, " ");
+    }
+
+    args[i] = NULL;
+    return i;
 }

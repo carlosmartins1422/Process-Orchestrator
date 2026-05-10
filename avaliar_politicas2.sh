@@ -1,9 +1,8 @@
 #!/bin/bash
-# antes de correr ./avaliar_politicas.sh
-# tem que se fzer chmod +x avaliar_politicas.sh, para dar permissão de execução ao script
-# adicionar tempo por user para ver como as politicas afetam cada user individualmente
+# Cenário pensado para evidenciar diferenças entre FIFO, RANDOM e FAIR
+# quando alguns utilizadores submetem poucos jobs e outros muitos.
 
-REPORT="avaliacao_politicas.txt"
+REPORT="avaliacao_politicas2.txt"
 controller_pid=""
 LAST_PID=""
 
@@ -42,8 +41,7 @@ monitoriza_user() {
 		sleep 0.05
 	done
 
-	local fim_user
-	local tempo_user
+	local fim_user tempo_user
 	fim_user=$(date +%s.%N)
 	tempo_user=$(calcula_tempo "$inicio_user" "$fim_user")
 	echo "User $user_id | Tempo total desde a primeira submissão até à conclusão do último processo: $tempo_user segundos" >> tmp/tempos_users.txt
@@ -92,20 +90,29 @@ lanca_runner() {
 	LAST_PID=$!
 }
 
+espera_lista_pids() {
+	for pid in "$@"; do
+		wait "$pid"
+	done
+}
+
 executa_teste() {
 	local politica="$1"
 	local paralelismo="$2"
-	local base="tmp/${politica}_${paralelismo}"
-	local inicio
-	local fim
-	local tempo_total
+	local base="tmp/${politica}_${paralelismo}_c2"
+	local inicio fim tempo_total
+	local user1_pids=()
+	local user2_pids=()
+	local user3_pids=()
+	local user4_pids=()
 
 	rm -f log.txt
 	rm -f tmp/*
 
 	echo "==================================================" >> "$REPORT"
 	echo "POLITICA: $politica | PARALELISMO: $paralelismo" >> "$REPORT"
-	echo "CENARIO: 4 utilizadores, 5 comandos por utilizador" >> "$REPORT"
+	echo "CENARIO: users 1 e 2 com muitos jobs longos; users 3 e 4 com poucos jobs curtos" >> "$REPORT"
+	echo "Submissão: users 1 e 2 entram primeiro; users 3 e 4 entram depois" >> "$REPORT"
 
 	inicio=$(date +%s.%N)
 	echo "A correr teste: politica=$politica paralelismo=$paralelismo"
@@ -116,87 +123,40 @@ executa_teste() {
 	sleep 1
 
 	inicio_user1=$(date +%s.%N)
-	lanca_runner 1 "${base}_u1_c1.txt" "sleep 3"
-	runner1_pid=$LAST_PID
-	lanca_runner 1 "${base}_u1_c2.txt" "sleep 3"
-	runner2_pid=$LAST_PID
-	lanca_runner 1 "${base}_u1_c3.txt" "sleep 3"
-	runner3_pid=$LAST_PID
-	lanca_runner 1 "${base}_u1_c4.txt" "sleep 3"
-	runner4_pid=$LAST_PID
-	lanca_runner 1 "${base}_u1_c5.txt" "sleep 3"
-	runner5_pid=$LAST_PID
-	monitoriza_user 1 "$inicio_user1" "$runner1_pid" "$runner2_pid" "$runner3_pid" "$runner4_pid" "$runner5_pid" &
+	for i in 1 2 3 4 5 6 7 8; do
+		lanca_runner 1 "${base}_u1_c${i}.txt" "sleep 3"
+		user1_pids+=("$LAST_PID")
+	done
+	monitoriza_user 1 "$inicio_user1" "${user1_pids[@]}" &
 	monitor1_pid=$!
 
-	sleep 1
-
 	inicio_user2=$(date +%s.%N)
-	lanca_runner 2 "${base}_u2_c1.txt" "sleep 1"
-	runner6_pid=$LAST_PID
-	lanca_runner 2 "${base}_u2_c2.txt" "sleep 1"
-	runner7_pid=$LAST_PID
-	lanca_runner 2 "${base}_u2_c3.txt" "sleep 1"
-	runner8_pid=$LAST_PID
-	lanca_runner 2 "${base}_u2_c4.txt" "sleep 1"
-	runner9_pid=$LAST_PID
-	lanca_runner 2 "${base}_u2_c5.txt" "sleep 1"
-	runner10_pid=$LAST_PID
-	monitoriza_user 2 "$inicio_user2" "$runner6_pid" "$runner7_pid" "$runner8_pid" "$runner9_pid" "$runner10_pid" &
+	for i in 1 2 3 4 5 6 7 8; do
+		lanca_runner 2 "${base}_u2_c${i}.txt" "sleep 3"
+		user2_pids+=("$LAST_PID")
+	done
+	monitoriza_user 2 "$inicio_user2" "${user2_pids[@]}" &
 	monitor2_pid=$!
 
 	sleep 1
 
 	inicio_user3=$(date +%s.%N)
-	lanca_runner 3 "${base}_u3_c1.txt" "sleep 2"
-	runner11_pid=$LAST_PID
-	lanca_runner 3 "${base}_u3_c2.txt" "sleep 2"
-	runner12_pid=$LAST_PID
-	lanca_runner 3 "${base}_u3_c3.txt" "sleep 2"
-	runner13_pid=$LAST_PID
-	lanca_runner 3 "${base}_u3_c4.txt" "sleep 2"
-	runner14_pid=$LAST_PID
-	lanca_runner 3 "${base}_u3_c5.txt" "sleep 2"
-	runner15_pid=$LAST_PID
-	monitoriza_user 3 "$inicio_user3" "$runner11_pid" "$runner12_pid" "$runner13_pid" "$runner14_pid" "$runner15_pid" &
+	for i in 1 2; do
+		lanca_runner 3 "${base}_u3_c${i}.txt" "sleep 1"
+		user3_pids+=("$LAST_PID")
+	done
+	monitoriza_user 3 "$inicio_user3" "${user3_pids[@]}" &
 	monitor3_pid=$!
 
-	sleep 1
-
 	inicio_user4=$(date +%s.%N)
-	lanca_runner 4 "${base}_u4_c1.txt" "sleep 1"
-	runner16_pid=$LAST_PID
-	lanca_runner 4 "${base}_u4_c2.txt" "sleep 3"
-	runner17_pid=$LAST_PID
-	lanca_runner 4 "${base}_u4_c3.txt" "sleep 1"
-	runner18_pid=$LAST_PID
-	lanca_runner 4 "${base}_u4_c4.txt" "sleep 3"
-	runner19_pid=$LAST_PID
-	lanca_runner 4 "${base}_u4_c5.txt" "sleep 1"
-	runner20_pid=$LAST_PID
-	monitoriza_user 4 "$inicio_user4" "$runner16_pid" "$runner17_pid" "$runner18_pid" "$runner19_pid" "$runner20_pid" &
+	for i in 1 2; do
+		lanca_runner 4 "${base}_u4_c${i}.txt" "sleep 1"
+		user4_pids+=("$LAST_PID")
+	done
+	monitoriza_user 4 "$inicio_user4" "${user4_pids[@]}" &
 	monitor4_pid=$!
 
-	wait "$runner1_pid"
-	wait "$runner2_pid"
-	wait "$runner3_pid"
-	wait "$runner4_pid"
-	wait "$runner5_pid"
-	wait "$runner6_pid"
-	wait "$runner7_pid"
-	wait "$runner8_pid"
-	wait "$runner9_pid"
-	wait "$runner10_pid"
-	wait "$runner11_pid"
-	wait "$runner12_pid"
-	wait "$runner13_pid"
-	wait "$runner14_pid"
-	wait "$runner15_pid"
-	wait "$runner16_pid"
-	wait "$runner17_pid"
-	wait "$runner18_pid"
-	wait "$runner19_pid"
-	wait "$runner20_pid"
+	espera_lista_pids "${user1_pids[@]}" "${user2_pids[@]}" "${user3_pids[@]}" "${user4_pids[@]}"
 	wait "$monitor1_pid"
 	wait "$monitor2_pid"
 	wait "$monitor3_pid"
@@ -219,9 +179,10 @@ executa_teste() {
 	rm -f "${base}"_*.txt
 }
 
-echo "AVALIACAO DE POLITICAS DE ESCALONAMENTO" > "$REPORT"
+echo "AVALIACAO DE POLITICAS DE ESCALONAMENTO - CENARIO 2" > "$REPORT"
 echo >> "$REPORT"
 echo "Relatório resumido: política, paralelismo, tempo total, tempo de cada comando e tempo total por utilizador." >> "$REPORT"
+echo "Objetivo: mostrar o impacto quando alguns users submetem poucos jobs e outros muitos." >> "$REPORT"
 
 make clean > /dev/null 2>&1
 make > /dev/null 2>&1

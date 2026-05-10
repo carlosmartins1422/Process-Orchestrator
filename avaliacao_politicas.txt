@@ -1,174 +1,210 @@
 AVALIACAO DE POLITICAS DE ESCALONAMENTO
 
-Relatório resumido: política, paralelismo, tempo total e tempo de cada comando.
+Relatório resumido: política, paralelismo, tempo total, tempo de cada comando e tempo total por utilizador.
 ==================================================
 POLITICA: FIFO | PARALELISMO: 2
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 21.06 segundos
+Tempo total: 21.12 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.004613 s
-User 1 | sleep 3 | 3.004234 s
-User 2 | sleep 1 | 1.004335 s
-User 2 | sleep 1 | 1.002144 s
-User 1 | sleep 3 | 3.006008 s
-User 2 | sleep 1 | 1.004670 s
-User 2 | sleep 1 | 1.003770 s
-User 2 | sleep 1 | 1.003947 s
-User 1 | sleep 3 | 3.004096 s
-User 3 | sleep 2 | 2.003986 s
-User 1 | sleep 3 | 3.004524 s
-User 3 | sleep 2 | 2.003882 s
-User 4 | sleep 1 | 1.004669 s
-User 3 | sleep 2 | 2.005043 s
-User 4 | sleep 3 | 3.004358 s
-User 3 | sleep 2 | 2.004770 s
-User 4 | sleep 1 | 1.003950 s
-User 3 | sleep 2 | 2.003505 s
-User 4 | sleep 1 | 1.004843 s
-User 4 | sleep 3 | 3.003875 s
+User 1 | sleep 3 | 3.005530 s
+User 1 | sleep 3 | 3.006001 s
+User 2 | sleep 1 | 1.003708 s
+User 2 | sleep 1 | 1.004699 s
+User 1 | sleep 3 | 3.003653 s
+User 2 | sleep 1 | 1.004799 s
+User 2 | sleep 1 | 1.004697 s
+User 2 | sleep 1 | 1.004714 s
+User 1 | sleep 3 | 3.004040 s
+User 3 | sleep 2 | 2.004482 s
+User 1 | sleep 3 | 3.003719 s
+User 3 | sleep 2 | 2.003335 s
+User 4 | sleep 1 | 1.001523 s
+User 3 | sleep 2 | 2.001605 s
+User 4 | sleep 3 | 3.003856 s
+User 3 | sleep 2 | 2.004194 s
+User 4 | sleep 1 | 1.004829 s
+User 3 | sleep 2 | 2.004791 s
+User 4 | sleep 1 | 1.004647 s
+User 4 | sleep 3 | 3.004120 s
+
+[Tempo total por utilizador]
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 7.04 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 12.04 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 16.02 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 17.04 segundos
 ==================================================
 POLITICA: RANDOM | PARALELISMO: 2
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 21.04 segundos
+Tempo total: 21.14 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.005054 s
-User 1 | sleep 3 | 3.004888 s
-User 2 | sleep 1 | 1.004077 s
-User 3 | sleep 2 | 2.004399 s
-User 4 | sleep 1 | 1.003763 s
-User 3 | sleep 2 | 2.004409 s
-User 1 | sleep 3 | 3.003609 s
-User 2 | sleep 1 | 1.003355 s
-User 2 | sleep 1 | 1.001088 s
-User 2 | sleep 1 | 1.001609 s
-User 1 | sleep 3 | 3.001271 s
-User 4 | sleep 1 | 1.004370 s
-User 4 | sleep 1 | 1.001784 s
-User 4 | sleep 3 | 3.002095 s
-User 3 | sleep 2 | 2.002844 s
-User 2 | sleep 1 | 1.003821 s
-User 3 | sleep 2 | 2.004614 s
-User 4 | sleep 3 | 3.004294 s
-User 1 | sleep 3 | 3.005603 s
-User 3 | sleep 2 | 2.001792 s
+User 1 | sleep 3 | 3.004777 s
+User 1 | sleep 3 | 3.004627 s
+User 3 | sleep 2 | 2.004164 s
+User 1 | sleep 3 | 3.004176 s
+User 4 | sleep 1 | 1.004543 s
+User 1 | sleep 3 | 3.005161 s
+User 3 | sleep 2 | 2.004020 s
+User 4 | sleep 1 | 1.006614 s
+User 2 | sleep 1 | 1.004063 s
+User 2 | sleep 1 | 1.004066 s
+User 4 | sleep 3 | 3.005293 s
+User 1 | sleep 3 | 3.004689 s
+User 3 | sleep 2 | 2.005263 s
+User 3 | sleep 2 | 2.016814 s
+User 2 | sleep 1 | 1.011733 s
+User 2 | sleep 1 | 1.004560 s
+User 4 | sleep 3 | 3.016960 s
+User 2 | sleep 1 | 1.003787 s
+User 4 | sleep 1 | 1.004296 s
+User 3 | sleep 2 | 2.004588 s
+
+[Tempo total por utilizador]
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 13.08 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 17.07 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 16.02 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 18.08 segundos
 ==================================================
 POLITICA: FAIR | PARALELISMO: 2
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 21.06 segundos
+Tempo total: 21.10 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.004636 s
-User 1 | sleep 3 | 3.004406 s
-User 2 | sleep 1 | 1.003912 s
-User 3 | sleep 2 | 2.003615 s
-User 4 | sleep 1 | 1.002021 s
-User 2 | sleep 1 | 1.004069 s
-User 3 | sleep 2 | 2.004234 s
-User 4 | sleep 3 | 3.004330 s
-User 1 | sleep 3 | 3.003988 s
-User 2 | sleep 1 | 1.004068 s
-User 4 | sleep 1 | 1.003672 s
-User 3 | sleep 2 | 2.003931 s
-User 2 | sleep 1 | 1.004395 s
-User 1 | sleep 3 | 3.004133 s
-User 3 | sleep 2 | 2.004172 s
-User 4 | sleep 3 | 3.003987 s
-User 1 | sleep 3 | 3.005514 s
-User 2 | sleep 1 | 1.003598 s
-User 4 | sleep 1 | 1.003703 s
-User 3 | sleep 2 | 2.003840 s
+User 1 | sleep 3 | 3.005782 s
+User 1 | sleep 3 | 3.005203 s
+User 2 | sleep 1 | 1.004933 s
+User 3 | sleep 2 | 2.004250 s
+User 4 | sleep 1 | 1.004280 s
+User 2 | sleep 1 | 1.004930 s
+User 3 | sleep 2 | 2.005104 s
+User 4 | sleep 3 | 3.004131 s
+User 2 | sleep 1 | 1.002783 s
+User 1 | sleep 3 | 3.004667 s
+User 4 | sleep 1 | 1.004050 s
+User 3 | sleep 2 | 2.004278 s
+User 2 | sleep 1 | 1.005088 s
+User 1 | sleep 3 | 3.005357 s
+User 3 | sleep 2 | 2.004546 s
+User 4 | sleep 3 | 3.006512 s
+User 1 | sleep 3 | 3.003960 s
+User 2 | sleep 1 | 1.006429 s
+User 4 | sleep 1 | 1.004639 s
+User 3 | sleep 2 | 2.004114 s
+
+[Tempo total por utilizador]
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 17.04 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 18.08 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 16.04 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 18.02 segundos
 ==================================================
 POLITICA: FIFO | PARALELISMO: 4
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 12.05 segundos
+Tempo total: 12.09 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.004317 s
-User 1 | sleep 3 | 3.004290 s
-User 1 | sleep 3 | 3.004411 s
-User 1 | sleep 3 | 3.005008 s
-User 2 | sleep 1 | 1.007517 s
-User 2 | sleep 1 | 1.004761 s
-User 3 | sleep 2 | 2.005302 s
-User 4 | sleep 1 | 1.004176 s
-User 2 | sleep 1 | 1.004763 s
-User 1 | sleep 3 | 3.004808 s
-User 2 | sleep 1 | 1.004324 s
-User 3 | sleep 2 | 2.005079 s
-User 2 | sleep 1 | 1.004072 s
-User 4 | sleep 1 | 1.004217 s
-User 4 | sleep 3 | 3.006082 s
-User 3 | sleep 2 | 2.004202 s
-User 3 | sleep 2 | 2.004364 s
-User 4 | sleep 1 | 1.005220 s
-User 3 | sleep 2 | 2.004541 s
-User 4 | sleep 3 | 3.004847 s
+User 1 | sleep 3 | 3.005077 s
+User 1 | sleep 3 | 3.007442 s
+User 1 | sleep 3 | 3.006140 s
+User 1 | sleep 3 | 3.008454 s
+User 2 | sleep 1 | 1.006629 s
+User 2 | sleep 1 | 1.007668 s
+User 4 | sleep 1 | 1.002236 s
+User 3 | sleep 2 | 2.006660 s
+User 2 | sleep 1 | 1.001227 s
+User 1 | sleep 3 | 3.004892 s
+User 2 | sleep 1 | 1.001532 s
+User 3 | sleep 2 | 2.001167 s
+User 2 | sleep 1 | 1.003694 s
+User 4 | sleep 3 | 3.001854 s
+User 4 | sleep 1 | 1.001718 s
+User 3 | sleep 2 | 2.003817 s
+User 3 | sleep 2 | 2.001989 s
+User 4 | sleep 1 | 1.006307 s
+User 3 | sleep 2 | 2.004537 s
+User 4 | sleep 3 | 3.005202 s
+
+[Tempo total por utilizador]
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 6.03 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 6.01 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 8.05 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 8.00 segundos
 ==================================================
 POLITICA: RANDOM | PARALELISMO: 4
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 11.05 segundos
+Tempo total: 13.09 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.005399 s
-User 1 | sleep 3 | 3.005071 s
-User 1 | sleep 3 | 3.004167 s
-User 1 | sleep 3 | 3.003859 s
-User 2 | sleep 1 | 1.004509 s
-User 3 | sleep 2 | 2.004550 s
-User 3 | sleep 2 | 2.004214 s
-User 3 | sleep 2 | 2.004100 s
-User 4 | sleep 1 | 1.004302 s
-User 3 | sleep 2 | 2.004500 s
-User 4 | sleep 3 | 3.004149 s
-User 2 | sleep 1 | 1.004037 s
-User 1 | sleep 3 | 3.005016 s
-User 4 | sleep 1 | 1.004076 s
-User 2 | sleep 1 | 1.004215 s
-User 2 | sleep 1 | 1.003765 s
-User 4 | sleep 1 | 1.003663 s
-User 4 | sleep 3 | 3.003877 s
-User 3 | sleep 2 | 2.004032 s
-User 2 | sleep 1 | 1.003925 s
+User 1 | sleep 3 | 3.004766 s
+User 1 | sleep 3 | 3.006007 s
+User 1 | sleep 3 | 3.005250 s
+User 1 | sleep 3 | 3.004736 s
+User 2 | sleep 1 | 1.004268 s
+User 3 | sleep 2 | 2.004323 s
+User 3 | sleep 2 | 2.003475 s
+User 4 | sleep 1 | 1.003265 s
+User 1 | sleep 3 | 3.003783 s
+User 2 | sleep 1 | 1.004034 s
+User 3 | sleep 2 | 2.004390 s
+User 3 | sleep 2 | 2.006653 s
+User 4 | sleep 3 | 3.004962 s
+User 2 | sleep 1 | 1.004785 s
+User 4 | sleep 1 | 1.005502 s
+User 2 | sleep 1 | 1.008668 s
+User 3 | sleep 2 | 2.007803 s
+User 2 | sleep 1 | 1.006447 s
+User 4 | sleep 1 | 1.005798 s
+User 4 | sleep 3 | 3.006338 s
+
+[Tempo total por utilizador]
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 6.08 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 8.07 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 7.05 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 9.01 segundos
 ==================================================
 POLITICA: FAIR | PARALELISMO: 4
 CENARIO: 4 utilizadores, 5 comandos por utilizador
 
 [Resumo do teste]
-Tempo total: 11.06 segundos
+Tempo total: 11.07 segundos
 
 [Comandos executados]
-User 1 | sleep 3 | 3.004232 s
-User 1 | sleep 3 | 3.005840 s
-User 1 | sleep 3 | 3.004072 s
-User 1 | sleep 3 | 3.004163 s
-User 2 | sleep 1 | 1.005158 s
-User 2 | sleep 1 | 1.005306 s
-User 3 | sleep 2 | 2.006176 s
-User 3 | sleep 2 | 2.005946 s
-User 4 | sleep 1 | 1.004349 s
-User 2 | sleep 1 | 1.005073 s
-User 4 | sleep 1 | 1.005000 s
-User 4 | sleep 3 | 3.003553 s
-User 3 | sleep 2 | 2.004886 s
-User 2 | sleep 1 | 1.004471 s
-User 3 | sleep 2 | 2.010099 s
-User 2 | sleep 1 | 1.012904 s
-User 4 | sleep 1 | 1.011656 s
-User 4 | sleep 3 | 3.003467 s
-User 1 | sleep 3 | 3.003081 s
-User 3 | sleep 2 | 2.016035 s
+User 1 | sleep 3 | 3.004210 s
+User 1 | sleep 3 | 3.004674 s
+User 1 | sleep 3 | 3.005775 s
+User 1 | sleep 3 | 3.004277 s
+User 2 | sleep 1 | 1.004681 s
+User 2 | sleep 1 | 1.004928 s
+User 3 | sleep 2 | 2.004445 s
+User 3 | sleep 2 | 2.003649 s
+User 4 | sleep 1 | 1.004786 s
+User 2 | sleep 1 | 1.003501 s
+User 4 | sleep 1 | 1.003446 s
+User 3 | sleep 2 | 2.004437 s
+User 4 | sleep 3 | 3.004597 s
+User 2 | sleep 1 | 1.004710 s
+User 3 | sleep 2 | 2.006085 s
+User 2 | sleep 1 | 1.003793 s
+User 4 | sleep 1 | 1.003428 s
+User 4 | sleep 3 | 3.004537 s
+User 1 | sleep 3 | 3.004535 s
+User 3 | sleep 2 | 2.002412 s
+
+[Tempo total por utilizador]
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 7.03 segundos
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 8.02 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 7.00 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 10.05 segundos
 
 ==================================================
 FIM DOS TESTES

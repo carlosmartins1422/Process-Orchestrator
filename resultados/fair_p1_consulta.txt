@@ -1,6 +1,0 @@
- Comandos em execução 
-  [ID: 20936] [user: 1] sleep 4
- Comandos em espera 
-  [ID: 20937] [user: 1] sleep 4
-  [ID: 20938] [user: 2] sleep 1
-  [ID: 20939] [user: 2] sleep 1

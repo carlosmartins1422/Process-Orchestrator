@@ -1,0 +1,17 @@
+avaliacao_politicas.txt
+avaliar_politicas.sh
+bin
+fase1.txt
+fase2.txt
+fase3.txt
+fase4.txt
+include
+log.txt
+Makefile
+obj
+out.txt
+relatorioSO.docx
+resultados
+src
+teste_basico.sh
+tmp

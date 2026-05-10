@@ -1,0 +1,4 @@
+User 3 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.03 segundos
+User 4 | Tempo total desde a primeira submissão até à conclusão do último processo: 4.03 segundos
+User 1 | Tempo total desde a primeira submissão até à conclusão do último processo: 14.06 segundos
+User 2 | Tempo total desde a primeira submissão até à conclusão do último processo: 14.04 segundos

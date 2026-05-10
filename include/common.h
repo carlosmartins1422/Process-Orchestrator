@@ -16,6 +16,8 @@ void runner_pede_consulta_controller();
 int substitui_comando_no_array (Request req_arr[], int size, Request req);
 
 int escrever_no_log(Request req, double tempo_gasto);
+char *trim_espacos(char *str);
+int prepara_argumentos(char *comando, char *args[], int max_args);
 
 int controller_envia_Ok_para_runner(Request req);
 int controller_envia_lista_para_runner(Request req, Request req_arr[], int query_size, int comando_em_execucao);

@@ -1,5 +1,0 @@
-[controller] parallel-commands: 2
-[controller] scheduling policy: RANDOM
-[runner] sent shutdown notification
-[runner] waiting for controller to shutdown...
-[runner] controller exited.

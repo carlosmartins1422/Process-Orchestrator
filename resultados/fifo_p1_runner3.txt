@@ -1,2 +1,0 @@
-[runner] command 20820 submitted
-[runner] command 20820 finished.
