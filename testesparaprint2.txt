@@ -1,0 +1,33 @@
+Resumo dos resultados de avaliacao_politicas2.txt
+
+Cenário
+- U1: 8x sleep 3 | U2: 8x sleep 3
+- U3: 2x sleep 1 | U4: 2x sleep 1
+
+Paralelismo 2
+
+FIFO
+- total: 28.11 s
+- U1: 21.05 s | U2: 27.07 s | U3: 22.03 s | U4: 24.07 s
+
+RANDOM
+- total: 27.09 s
+- U1: 26.07 s | U2: 26.05 s | U3: 22.06 s | U4: 19.03 s
+
+FAIR
+- total: 27.10 s
+- U1: 26.08 s | U2: 26.06 s | U3: 6.04 s | U4: 7.03 s
+
+Paralelismo 4
+
+FIFO
+- total: 15.11 s
+- U1: 11.03 s | U2: 14.07 s | U3: 4.03 s | U4: 4.01 s
+
+RANDOM
+- total: 16.08 s
+- U1: 15.06 s | U2: 13.03 s | U3: 3.01 s | U4: 8.05 s
+
+FAIR
+- total: 15.08 s
+- U1: 14.06 s | U2: 14.04 s | U3: 4.03 s | U4: 4.03 s
